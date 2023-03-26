@@ -1,0 +1,24 @@
+.footer {
+  position: relative;
+  margin-top: 1rem;
+  margin: bottom 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.15rem;
+  color: $grayishBlue;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style-type: none;
+    li > a:hover {
+      color: $darkDesaturatedBlue;
+    }
+    li > a {
+      font-size: 0.8rem;
+      color: $grayishBlue;
+      transition: all 500ms;
+    }
+  }
+}

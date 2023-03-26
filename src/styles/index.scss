@@ -1,0 +1,28 @@
+// font
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+// CSS Reset/Normilize
+@import "./modern-normalize.min";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  min-height: 100%;
+  background-color: $veryPaleBlue;
+  background-image: url("/images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: auto 22rem;
+  color: $darkDesaturatedBlue;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    background-size: 100% 62%;
+  }
+}

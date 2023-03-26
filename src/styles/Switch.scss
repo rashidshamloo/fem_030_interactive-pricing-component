@@ -1,0 +1,33 @@
+.switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .switch {
+    width: 4.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .MuiSwitch-switchBase {
+      top: 0.15rem;
+      left: 0.35rem;
+      color: $white;
+    }
+    & .MuiSwitch-thumb {
+      width: 1rem;
+      height: 1rem;
+      box-shadow: 0 0 0.2rem rgba(black, 0.2);
+    }
+    & .Mui-checked + .MuiSwitch-track {
+      background-color: $lightGrayishBlue2;
+    }
+    &:hover .MuiSwitch-track {
+      background-color: $strongCyan;
+    }
+    & .MuiSwitch-track {
+      height: 1.35rem;
+      width: 100%rem;
+      border-radius: 1rem;
+      background-color: $lightGrayishBlue2;
+    }
+  }
+}

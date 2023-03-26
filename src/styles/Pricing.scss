@@ -1,0 +1,181 @@
+.pricing-component {
+  text-align: center;
+  color: $grayishBlue;
+  background-color: $white;
+  border-radius: 0.5rem;
+  width: 95%;
+  box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.05);
+  margin: -1.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.1rem 1rem;
+  &__header {
+    width: 100%;
+  }
+  &__pageviews {
+    text-transform: uppercase;
+    font-size: 0.725rem;
+    letter-spacing: 0.125rem;
+    font-weight: 800;
+  }
+  &__price-range {
+    height: 5.85rem;
+  }
+  &__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    letter-spacing: -0.05rem;
+    #price {
+      color: $darkDesaturatedBlue;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+    #period {
+      margin-left: 0.6rem;
+      position: relative;
+      top: 0.1rem;
+    }
+    #period::before {
+      content: "/";
+      margin-left: 0.1rem;
+      margin-right: 0.2rem;
+    }
+  }
+  &__period-selection {
+    margin-top: 1.8rem;
+    font-size: 0.75rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.4rem;
+    & > * {
+      transition: opacity 500ms;
+    }
+  }
+  &__yearly-discount {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0.4rem;
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+    background-color: $lightGrayishRed;
+    color: $lightRed;
+    border-radius: 0.5rem;
+  }
+  &__toggle {
+    width: 4rem;
+    display: inline-block;
+  }
+  &__separator {
+    border-color: $lightGrayishBlue transparent transparent transparent;
+    border-width: 1px;
+    border-style: solid;
+    width: 110%;
+    margin: 1.8rem 0 0.7rem;
+  }
+  &__perks {
+    font-size: 0.775rem;
+    list-style-position: inside;
+    list-style-image: url("/images/icon-check.svg");
+    li {
+      margin: 0.8rem 0;
+    }
+    li::before {
+      content: "";
+      display: inline-block;
+      width: 0.5rem;
+    }
+  }
+  &__button {
+    margin-top: 1.15rem;
+    padding: 0.75rem 2.8rem;
+    background-color: $darkDesaturatedBlue;
+    border-radius: 2rem;
+    font-size: 0.775rem;
+    font-weight: 800;
+    color: $paleBlue;
+    border: 0;
+    &:hover {
+      cursor: pointer;
+      color: $white;
+    }
+  }
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .pricing-component {
+    text-align: left;
+    width: auto;
+    margin: 0;
+    padding-top: 2.8rem;
+    padding-bottom: 1.2rem;
+    & > * {
+      width: 88%;
+    }
+    &__header {
+      display: grid;
+      grid-template-areas: "a1 a2" "a3 a3";
+      align-items: center;
+    }
+    &__pageviews {
+      grid-area: a1;
+      font-size: 0.875rem;
+    }
+    &__price {
+      justify-content: flex-end;
+      grid-area: a2;
+      font-size: 0.95rem;
+      #price {
+        font-size: 2.5rem;
+      }
+      #period {
+        letter-spacing: 0.025rem;
+      }
+      #period::before {
+        margin-left: 0.1rem;
+        margin-right: 0.2rem;
+      }
+    }
+    &__price-range {
+      grid-area: a3;
+      height: 5rem;
+      margin-top: 0.55rem;
+    }
+    &__period-selection {
+      margin-top: 0.7rem;
+      width: auto;
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 1.8rem;
+      margin-top: 0.5rem;
+    }
+    &__button {
+      margin-top: 0;
+    }
+    &__yearly-discount {
+      display: flex;
+      column-gap: 0.15rem;
+    }
+    &__separator {
+      margin-top: 2.15rem;
+      width: 106%;
+    }
+    .hidden-mobile {
+      display: initial;
+    }
+  }
+}

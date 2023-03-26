@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 16.25rem;
+  row-gap: 0.6rem;
+  background-image: url("/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  & > h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+  & > p {
+    font-size: 0.825rem;
+    margin: 0 6rem 0;
+    text-align: center;
+    line-height: 1.8;
+    color: $grayishBlue;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  header {
+    & > h1 {
+      font-size: 1.75rem;
+    }
+    & > p {
+      font-size: 0.95rem;
+    }
+  }
+}
