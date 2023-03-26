@@ -78,7 +78,7 @@ const Pricing = ({ data, yearlyDiscount }: IPricingProps) => {
           <li>100% data ownership</li>
           <li>Email reports</li>
         </ul>
-        <button className="pricing-component__button">Start my trial</button>
+        <a href="#" className="pricing-component__button">Start my trial</a>
       </div>
     </div>
   );

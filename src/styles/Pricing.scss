@@ -101,9 +101,8 @@
     font-size: 0.775rem;
     font-weight: 800;
     color: $paleBlue;
-    border: 0;
+    text-decoration: none;
     &:hover {
-      cursor: pointer;
       color: $white;
     }
   }
