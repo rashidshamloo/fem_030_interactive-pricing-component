@@ -9,7 +9,7 @@ interface ISwitchData {
 
 const Switch = ({ checked, togglePeriod }: ISwitchData) => {
   return (
-    <div className="switch-container">
+    <span className="switch-container">
       <MaterialSwitch
         key="pageviews-switch"
         inputProps={{ "aria-label": "Switch Billing Period" }}
@@ -17,7 +17,7 @@ const Switch = ({ checked, togglePeriod }: ISwitchData) => {
         checked={checked}
         onChange={() => togglePeriod()}
       />
-    </div>
+    </span>
   );
 };
 
