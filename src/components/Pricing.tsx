@@ -48,7 +48,7 @@ const Pricing = ({ data, yearlyDiscount }: IPricingProps) => {
         </div>
         <div className="pricing-component__price">
           <span id="price">${price.toFixed(2)}</span>
-          <span id="period">month</span>
+          <span id="period">{period === "yearly" ? "year" : "month"}</span>
         </div>
       </div>
       <div className="pricing-component__period-selection">
